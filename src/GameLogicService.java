@@ -7,6 +7,8 @@ public class GameLogicService {
 		
 		if(input == "rock" && input2 == "scissors") {
 			message = "rock crushes scissors -> rock wins";
+		} else if(input == "paper" && input2 == "rock") {
+			message = "paper covers rock -> paper wins";
 		}
 		return message;
 	}
