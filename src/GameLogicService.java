@@ -5,7 +5,9 @@ public class GameLogicService {
 		
 		String message = "";
 		
-		if(input == "rock" && input2 == "scissors") {
+		if(input == input2) {
+			message = "Tie - both the players choose the same object";
+		} else if(input == "rock" && input2 == "scissors") {
 			message = "rock crushes scissors -> rock wins";
 		} else if(input == "paper" && input2 == "rock") {
 			message = "paper covers rock -> paper wins";
