@@ -20,5 +20,11 @@ public class GameLogicServicetests {
 		GameLogicService gameLogicService = new GameLogicService();
 		assertSame("scissors cut paper -> scissors wins", gameLogicService.findAndShowWinner("scissors", "paper"));
 	}
+	
+	@Test
+	public void testFindAndShowWinnerThisIsTie() {
+		GameLogicService gameLogicService = new GameLogicService();
+		assertSame("Tie - both the players choose the same object", gameLogicService.findAndShowWinner("rock", "rock"));
+	}
 
 }
