@@ -35,5 +35,13 @@ public class InputValidationTests {
 		InputVaidation inputVaidation = new InputVaidation();
 		assertFalse(inputVaidation.isInputValid(input));
 	}
+	
+	@Test
+	public void testIsInputValidBlankValue() {
+		
+		String input = "xyz";
+		InputVaidation inputVaidation = new InputVaidation();
+		assertFalse(inputVaidation.isInputValid(input));
+	}
 
 }
