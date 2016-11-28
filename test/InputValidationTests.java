@@ -9,7 +9,7 @@ public class InputValidationTests {
 		
 		String input = "rock";
 		InputVaidation inputVaidation = new InputVaidation();
-		assertSame(true, inputVaidation.isInputValid(input));
+		assertTrue(inputVaidation.isInputValid(input));
 	}
 	
 	@Test
@@ -17,7 +17,7 @@ public class InputValidationTests {
 		
 		String input = "paper";
 		InputVaidation inputVaidation = new InputVaidation();
-		assertSame(true, inputVaidation.isInputValid(input));
+		assertTrue(inputVaidation.isInputValid(input));
 	}
 	
 	@Test
@@ -25,7 +25,15 @@ public class InputValidationTests {
 		
 		String input = "scissors";
 		InputVaidation inputVaidation = new InputVaidation();
-		assertSame(true, inputVaidation.isInputValid(input));
+		assertTrue(inputVaidation.isInputValid(input));
+	}
+	
+	@Test
+	public void testIsInputValidWrongValue() {
+		
+		String input = "xyz";
+		InputVaidation inputVaidation = new InputVaidation();
+		assertFalse(inputVaidation.isInputValid(input));
 	}
 
 }
