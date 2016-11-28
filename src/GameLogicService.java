@@ -6,13 +6,13 @@ public class GameLogicService {
 		String message = "";
 		
 		if(input == input2) {
-			message = "Tie - both the players choose the same object";
+			message = MessageConstants.TIE_SAME_OPTIONS_SELECTED;
 		} else if(input == "rock" && input2 == "scissors") {
-			message = "rock crushes scissors -> rock wins";
+			message = MessageConstants.ROCK_CRUSHES_SCISSORS;
 		} else if(input == "paper" && input2 == "rock") {
-			message = "paper covers rock -> paper wins";
+			message = MessageConstants.PAPER_COVERS_ROCK;
 		} else if (input == "scissors" && input2 == "paper") {
-			message = "scissors cut paper -> scissors wins";
+			message = MessageConstants.SCISSORS_CUT_PAPER;
 		}
 		return message;
 	}
