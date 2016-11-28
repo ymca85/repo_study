@@ -5,8 +5,10 @@ import org.junit.Test;
 public class InputValidationTests {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testIsInputValid() {
+		
+		InputVaidation inputVaidation = new InputVaidation();
+		
 	}
 
 }
