@@ -5,7 +5,8 @@ public class GameLogicServicetests {
 
 	@Test
 	public void testFindAndShowWinner() {
-		fail();
+		GameLogicService gameLogicService = new GameLogicService();
+		assertSame("", gameLogicService.findAndShowWinner("", ""));
 	}
 
 }
