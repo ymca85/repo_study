@@ -6,7 +6,7 @@ public class GameControllerTests {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		GameController gameController = new GameController();
 	}
 
 }
