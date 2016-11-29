@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class GameController {
 
@@ -6,6 +7,10 @@ public class GameController {
 				+ "\n It will be played by two player. Each player has to enter his choice for rock / paper / scissor."
 				+ "\n The winner will be selected depending upon input." + "\n Let's start the game.");
 
+	}
+
+	public String getFirstInputFromConsole(Scanner scanner) {
+		return "";
 	}
 
 }
