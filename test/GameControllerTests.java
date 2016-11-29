@@ -28,10 +28,15 @@ public class GameControllerTests {
 	
 	@Test
 	public void testGetFirstInputFromConsolevalue2() {
+
 		GameController gameController = new GameController();
-		Scanner scanner = new Scanner("scissors");
+		System.setIn(new ByteArrayInputStream("scissors".getBytes()));
+		Scanner scanner = new Scanner(System.in);
+		
 		String inputFromConsole = gameController.getFirstInputFromConsole(scanner);
-		assertSame("scissors", inputFromConsole);
+		assertEquals("scissors", inputFromConsole);
+		
+		System.setIn(System.in);
 	}
 
 }
