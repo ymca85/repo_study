@@ -9,7 +9,7 @@ public class GameController {
 
 	}
 
-	public String getFirstInputFromConsole(Scanner scanner) {
+	public String getInputFromConsole(Scanner scanner) {
 		return scanner.nextLine();
 	}
 

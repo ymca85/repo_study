@@ -14,26 +14,26 @@ public class GameControllerTests {
 //	}
 	
 	@Test
-	public void testGetFirstInputFromConsoleValue1() {
+	public void testGetInputFromConsoleValue1() {
 		
 		GameController gameController = new GameController();
 		System.setIn(new ByteArrayInputStream("rock".getBytes()));
 		Scanner scanner = new Scanner(System.in);
 		
-		String inputFromConsole = gameController.getFirstInputFromConsole(scanner);
+		String inputFromConsole = gameController.getInputFromConsole(scanner);
 		assertEquals("rock", inputFromConsole);
 		
 		System.setIn(System.in);
 	}
 	
 	@Test
-	public void testGetFirstInputFromConsolevalue2() {
+	public void testGetInputFromConsolevalue2() {
 
 		GameController gameController = new GameController();
 		System.setIn(new ByteArrayInputStream("scissors".getBytes()));
 		Scanner scanner = new Scanner(System.in);
 		
-		String inputFromConsole = gameController.getFirstInputFromConsole(scanner);
+		String inputFromConsole = gameController.getInputFromConsole(scanner);
 		assertEquals("scissors", inputFromConsole);
 		
 		System.setIn(System.in);
