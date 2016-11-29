@@ -26,7 +26,8 @@ public class GameController {
 					+ " is not a valid input, please try again by selecting one of the input as rock/paper/scissors.");
 		}
 		
-		
+		String resultMessage = gameLogicService.findAndShowWinner(input1, input2);
+		System.out.println(resultMessage);
 	}
 	
 	public void displayGameStartInformation() {

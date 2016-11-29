@@ -6,13 +6,17 @@ public class GameLogicServicetests {
 	@Test
 	public void testFindAndShowWinnerRockCrushesScissors() {
 		GameLogicService gameLogicService = new GameLogicService();
-		assertSame(MessageConstants.ROCK_CRUSHES_SCISSORS, gameLogicService.findAndShowWinner(UserInputs.ROCK.toString(), UserInputs.SCISSORS.toString()));
+		String input1 = "rock";
+		String input2 = "scissors";
+		assertSame(MessageConstants.ROCK_CRUSHES_SCISSORS, gameLogicService.findAndShowWinner(input1, input2));
 	}
 	
 	@Test
 	public void testFindAndShowWinnerPaperCoversRock() {
 		GameLogicService gameLogicService = new GameLogicService();
-		assertSame(MessageConstants.PAPER_COVERS_ROCK, gameLogicService.findAndShowWinner(UserInputs.PAPER.toString(), UserInputs.ROCK.toString()));
+		String input1 = "rock";
+		String input2 = "paper";
+		assertSame(MessageConstants.PAPER_COVERS_ROCK, gameLogicService.findAndShowWinner(input1, input2));
 	}
 	
 	@Test
