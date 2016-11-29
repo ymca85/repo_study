@@ -10,7 +10,7 @@ public class GameController {
 	}
 
 	public String getFirstInputFromConsole(Scanner scanner) {
-		return "rock";
+		return scanner.nextLine();
 	}
 
 }
