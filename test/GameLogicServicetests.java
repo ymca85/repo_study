@@ -4,7 +4,7 @@ import org.junit.Test;
 public class GameLogicServicetests {
 
 	@Test
-	public void testFindAndShowWinnerRockCrushesScissors() {
+	public void testFindAndShowWinnerRockVsScissors() {
 		GameLogicService gameLogicService = new GameLogicService();
 		String input1 = "rock";
 		String input2 = "scissors";
@@ -12,11 +12,19 @@ public class GameLogicServicetests {
 	}
 	
 	@Test
-	public void testFindAndShowWinnerPaperCoversRock() {
+	public void testFindAndShowWinnerRockVsPaper() {
 		GameLogicService gameLogicService = new GameLogicService();
 		String input1 = "rock";
 		String input2 = "paper";
 		assertSame(MessageConstants.PAPER_COVERS_ROCK, gameLogicService.findAndShowWinner(input1, input2));
+	}
+	
+	@Test
+	public void testFindAndShowWinnerPaperVsScissors() {
+		GameLogicService gameLogicService = new GameLogicService();
+		String input1 = "paper";
+		String input2 = "scissors";
+		assertSame(MessageConstants.SCISSORS_CUT_PAPER, gameLogicService.findAndShowWinner(input1, input2));
 	}
 	
 	@Test
