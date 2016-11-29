@@ -39,7 +39,7 @@ public class InputValidationTests {
 	@Test
 	public void testIsInputValidBlankValue() {
 		
-		String input = "xyz";
+		String input = "";
 		InputVaidation inputVaidation = new InputVaidation();
 		assertFalse(inputVaidation.isInputValid(input));
 	}
