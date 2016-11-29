@@ -44,10 +44,19 @@ public class GameLogicServicetests {
 	}
 
 	@Test
+	public void testFindAndShowWinnerScissorsVsPaper() {
+		GameLogicService gameLogicService = new GameLogicService();
+		String input1 = "scissors";
+		String input2 = "paper";
+		assertSame(MessageConstants.SCISSORS_CUT_PAPER, gameLogicService.findAndShowWinner(input1, input2));
+	}
+
+	@Test
 	public void testFindAndShowWinnerThisIsTie() {
 		GameLogicService gameLogicService = new GameLogicService();
-		assertSame(MessageConstants.TIE_SAME_OPTIONS_SELECTED,
-				gameLogicService.findAndShowWinner(UserInputs.ROCK.toString(), UserInputs.ROCK.toString()));
+		String input1 = "scissors";
+		String input2 = "scissors";
+		assertSame(MessageConstants.TIE_SAME_OPTIONS_SELECTED, gameLogicService.findAndShowWinner(input1, input2));
 	}
 
 }
