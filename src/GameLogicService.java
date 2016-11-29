@@ -7,12 +7,24 @@ public class GameLogicService {
 
 		if (input1.equals(input2)) {
 			message = MessageConstants.TIE_SAME_OPTIONS_SELECTED;
-		} else if (input1.equals(UserInputs.ROCK.toString()) && input2.equals(UserInputs.SCISSORS.toString())) {
-			message = MessageConstants.ROCK_CRUSHES_SCISSORS;
-		} else if (input1.equals(UserInputs.PAPER.toString()) && input2.equals(UserInputs.ROCK.toString())) {
-			message = MessageConstants.PAPER_COVERS_ROCK;
-		} else if (input1.equals(UserInputs.SCISSORS.toString()) && input2.equals(UserInputs.PAPER.toString())) {
-			message = MessageConstants.SCISSORS_CUT_PAPER;
+		} else if (input1.equals(UserInputs.ROCK.toString())) {
+			if(input2.equals(UserInputs.SCISSORS.toString())) {
+				message = MessageConstants.ROCK_CRUSHES_SCISSORS;				
+			} else if (input2.equals(UserInputs.PAPER.toString())) {
+				message = MessageConstants.PAPER_COVERS_ROCK;
+			}
+		} else if (input1.equals(UserInputs.PAPER.toString())) {
+			if(input2.equals(UserInputs.ROCK.toString())) {
+				message = MessageConstants.PAPER_COVERS_ROCK;				
+			} else if (input2.equals(UserInputs.SCISSORS.toString())) {
+				message = MessageConstants.SCISSORS_CUT_PAPER;
+			}
+		} else if (input1.equals(UserInputs.SCISSORS.toString())) {
+			if(input2.equals(UserInputs.ROCK.toString())) {
+				message = MessageConstants.ROCK_CRUSHES_SCISSORS;
+			} else if (input2.equals(UserInputs.PAPER.toString())) {
+				message = MessageConstants.SCISSORS_CUT_PAPER;				
+			}
 		}
 		return message;
 	}
