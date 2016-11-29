@@ -16,7 +16,8 @@ public class GameControllerTests {
 	public void testGetFirstInputFromConsole() {
 		GameController gameController = new GameController();
 		Scanner scanner = new Scanner("rock");
-		gameController.getFirstInputFromConsole(scanner);
+		String inputFromConsole = gameController.getFirstInputFromConsole(scanner);
+		assertSame("rock", inputFromConsole);
 	}
 
 }
